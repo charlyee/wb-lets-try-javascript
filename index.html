@@ -6,8 +6,13 @@
             Let's Learn JavaScript
         </title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Stylesheets: -->
         <link rel="stylesheet" href="./css/main.css">
+
+        <!-- Scripts: -->
         <script type="text/javascript" src="./js/scripts.js" defer></script>
+        <script type="text/javascript" src="./js/fizzbuzz.js" defer></script>
     </head>
     <body>
         <h1>Let's Learn JavaScript!</h1>
@@ -17,5 +22,27 @@
                 Press <strong>F12</strong>, or <em>inspect an element</em>, to open your browser tools! There, you can do quick JavaScript tests in your console. :)
             </p>
         </aside>
+        <!-- Buttons to run our test functions: -->
+        <form action="#" method="GET">
+            <h2>Run a function:</h2>
+            <button onclick="myFunction();">
+                Run: myFunction();
+            </button>
+            <button onclick="myFunction();">
+                Run: myFunction();
+            </button>
+            <button onclick="smileyFunction();">
+                Run: smileyFunction();
+            </button>
+            <button onclick="myObject.birthday();">
+                Run: myObject's "birthday" method.
+            </button>
+            <button onclick="myObject.sayHi();">
+                Run: myObject's "sayHi" method.
+            </button>
+            <button onclick="myFizzBuzz.fizzBuzz();">
+                Run: myFizzBuzz's "fizzBuzz" method.
+            </button>
+        </form>
     </body>
 </html>

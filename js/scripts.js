@@ -48,7 +48,7 @@ function myFunction () {
 // console.log( 'TesterNum is: '+testerNum ); // What is defined in local scope, will not be available globally...
 
 // We have to call upon it, in order to run it, don't forget!
-myFunction();
+// myFunction();
 
 /**
  * Let's convert C# exercise 4 to a JavaScript program!
@@ -164,7 +164,7 @@ myArray.forEach( function( arrayItem ) {
  myObject.hobbies[1] = 'programming'; // Update array value in position "1".
 
  // Let Bob speak!
- myObject.sayHi();
+ // myObject.sayHi();
 
  /*
   * myObject.age
