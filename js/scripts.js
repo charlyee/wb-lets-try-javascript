@@ -85,3 +85,62 @@ function addSmileyToBeginning( input )
 function writeName( input ) {
     console.log( input );
 }
+
+/* TRUTHY and FALSY
+ * true === true
+ * 'hello' == true
+ * 1 == true
+ * -58 == true
+ * false === false
+ * 0 == false
+ * undefined == false
+ * null == false
+ * NaN == false
+ * '' == false
+ */
+
+// If statement...
+var a = 3;
+var b = 5;
+if ( a === b ) {
+    console.log( 'a is identical to b.' );
+} else {
+    console.log( 'a and b are not identical.' );
+}
+
+// Converting the above to ternary...
+/*
+ * Syntax is:
+ * (condition) ? (logic for TRUE) : (logic for FALSE);
+ * Note that it RETURNS the outcome, so it can be used for assignment.
+ */
+( a === b ) ? console.log( 'a is identical to b.' ) : console.log( 'a and b are not identical.' );
+
+// A while loop takes a condition.
+var i = 0;
+while ( i < 6 ) {
+    console.log( 'While loop: '+i );
+    i++; // Make sure the condition will eventually be FALSE, or the loop will go on FOREVER! :(
+}
+
+// Foreach!? It is a method of the array datatype!
+myArray.forEach( function( arrayItem ) {
+    // Woah! We're in a "closure", or, an "anonymous function" now! We didn't declare and name it, so won't be able to call it again... it is useful here to process our array items though!
+    console.log( 'Array item is: '+arrayItem );
+} );
+
+/*
+ * Let's give objects a shot!
+ */
+
+ var myObject = {
+     name:    'Bob',
+     age:     32,
+     hobbies: [
+        'sports',
+        'movies',
+        'hiking'
+     ]
+ }
+
+ console.log( 'Hello! My name is '+myObject.name+'. I am '+myObject.age+' years old, and one of my hobbies is: '+myObject.hobbies[1]+'.' );
