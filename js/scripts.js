@@ -140,7 +140,26 @@ myArray.forEach( function( arrayItem ) {
         'sports',
         'movies',
         'hiking'
-     ]
+     ],
+     sayHi: function() {
+        console.log(
+            'Hello! My name is '
+            +this.name
+            +'. I am '
+            +this.age
+            +' years old, and one of my hobbies is: \r\n' // Newline character!
+            +this.hobbies[1]
+            +'.' );
+     }
  }
 
- console.log( 'Hello! My name is '+myObject.name+'. I am '+myObject.age+' years old, and one of my hobbies is: '+myObject.hobbies[1]+'.' );
+ myObject.age++; // Increment object's "age" property.
+ myObject.hobbies[1] = 'programming'; // Update array value in position "1".
+
+// Multi-line text can be included in a 
+var multiLineString = `
+    This text
+        is
+many lines!
+`;
+console.log( multiLineString );
