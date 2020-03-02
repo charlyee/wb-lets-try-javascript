@@ -56,9 +56,9 @@ myFunction();
 function smileyFunction()
 {
     var input = getInput();
-    input = AddSmileyToEnd( input );
-    input = AddSmileyToBeginning( input );
-    console.log( input );
+    input = addSmileyToEnd( input );
+    input = addSmileyToBeginning( input );
+    writeName( input );
 }
 
 // Retrieve input.
@@ -85,4 +85,3 @@ function addSmileyToBeginning( input )
 function writeName( input ) {
     console.log( input );
 }
-
