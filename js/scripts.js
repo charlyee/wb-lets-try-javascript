@@ -41,8 +41,11 @@ for ( var i = 0; i < 5; i++ ) {
 
 // A basic function!
 function myFunction () {
+    var testerNum = 36; // Careful! We can't use this outside of the function... this is locally scoped!
     console.log( 'My function has run.' );
 }
+
+// console.log( 'TesterNum is: '+testerNum ); // What is defined in local scope, will not be available globally...
 
 // We have to call upon it, in order to run it, don't forget!
 myFunction();
@@ -150,11 +153,30 @@ myArray.forEach( function( arrayItem ) {
             +' years old, and one of my hobbies is: \r\n' // Newline character!
             +this.hobbies[1]
             +'.' );
+     },
+     birthday: function() {
+        this.age++;
+        return this.age;
      }
  }
 
- myObject.age++; // Increment object's "age" property.
+ myObject.birthday(); // Increment object's "age" property.
  myObject.hobbies[1] = 'programming'; // Update array value in position "1".
+
+ // Let Bob speak!
+ myObject.sayHi();
+
+ /*
+  * myObject.age
+  * is equivalent to...
+  * myObject['age']
+  */
+
+console.log( 'Looping through myObject:' );
+ // We can loop through properties in an object:
+ for ( var prop in myObject ) {
+    console.log( myObject[prop] );
+ }
 
 // Multi-line text can be included in a 
 var multiLineString = `
