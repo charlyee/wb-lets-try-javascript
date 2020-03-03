@@ -150,6 +150,7 @@ calculatorForm.addEventListener( 'submit', function( event ) {
             result = num1Value - num2Value;
             break;
         case "add":
+            // "+" is multi-purpose, we need to enforce numbers here! The other operators are math-only, so JavaScript handles the conversion for us.
             result = Number( num1Value ) + Number( num2Value );
             break;
         case "divide":
