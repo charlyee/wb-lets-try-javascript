@@ -142,6 +142,26 @@ calculatorForm.addEventListener( 'submit', function( event ) {
     var operatorValue = operatorInput.value;
     var num1Value = num1Input.value;
     var num2Value = num2Input.value;
-} );
+
+    var result = 0;
+    // Let's run our math!
+    switch ( operatorValue ) {
+        case "subtract":
+            result = num1Value - num2Value;
+            break;
+        case "add":
+            result = Number( num1Value ) + Number( num2Value );
+            break;
+        case "divide":
+            result = num1Value / num2Value;
+            break;
+        case "multiply":
+            result = num1Value * num2Value;
+            break;
+    } // End of switch.
+
+    var resultElement = document.getElementById( 'result' );
+    resultElement.textContent = result; // Show the result in our element.
+} ); // End of eventListener.
 
 
