@@ -121,3 +121,27 @@ document.body.appendChild( otherNewParagraph );
 // Let's try query selector.
 var targetLink = document.querySelector( '.my-link' );
 targetLink.textContent = 'Go Back Home';
+
+/**
+ * FORMS!
+ */
+
+var calculatorForm = document.getElementById( 'calculator' );
+
+// Listen for a submission! Put your ear on that form...
+calculatorForm.addEventListener( 'submit', function( event ) {
+    // STOP the submission (event!)
+    event.preventDefault(); 
+
+    // Collect the form fields (DOM objects.)
+    var operatorInput = document.getElementById( 'operator' );
+    var num1Input = document.getElementById( 'num1' );
+    var num2Input = document.getElementById( 'num2' );
+
+    // Retrieve the values from the form fields.
+    var operatorValue = operatorInput.value;
+    var num1Value = num1Input.value;
+    var num2Value = num2Input.value;
+} );
+
+
