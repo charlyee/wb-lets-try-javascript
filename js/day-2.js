@@ -39,7 +39,7 @@ console.log( myString ); // 'Hello world!'
 
 myString = 5;
 console.log( 'Test 2:' );
-console.log( 'Type is: ' + ( typeof myString ) );
+console.log( 'Type is: ' + ( typeof myString ) ); // We can check types using "typeof"! Very useful in "if" statements to see if you have the right data-types.
 console.log( myString ); // 5
 
 myString = myString * 3;
@@ -56,3 +56,29 @@ myString = { "another" : "string test!?" };
 console.log( 'Test 5:' );
 console.log( 'Type is: ' + ( typeof myString ) );
 console.log( myString ); // { another: 'string test!?' }
+
+/**
+ * SWITCH (CASE) Statements
+ */
+
+var mathOperation = 'add';
+
+switch ( mathOperation ) {
+    case "subtract":
+        console.log( 5 - 5 );
+        break;
+    case "add":
+        console.log( 5 + 5 );
+        break; // Switches execute starting at a first MATCHing value.
+               // However... they only STOP executing when they hit a break.
+               // No break? Everything after the first match will execute!
+    case "divide":
+        console.log( 5 / 5 );
+        break;
+    case "multiply":
+        console.log( 5 * 5 );
+        break;
+    default:
+        console.log( 'No operator provided.' );
+        break;
+}
