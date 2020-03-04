@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            Table Exercise (DOM Manipulation)
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Script(s): -->
+        <script src="./js/table.js" type="text/javascript" defer></script>
+    </head>
+    <body>
+        <h1>Table Exercise (DOM Manipulation)</h1>
+        <nav>
+            <h2>Navigation</h2>
+            <ul>
+                <li>
+                    <a href="./index.html">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="./day-2.html">
+                        Day 2
+                    </a>
+                </li>
+                <li>
+                    <a href="./table.html">
+                        Table HTML Example
+                    </a><br><a href="./table-solution.html">
+                        (Solution)
+                    </a>
+                </li>
+                <li>
+                    <a href="./day-3.html">
+                        Day 3
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <form id="my-form" action="#" method="GET">
+            <label for="name">
+                Name:
+                <input id="name" name="name" type="text">
+            </label>
+            <label for="age">
+                Age:
+                <input id="age" name="age" type="text">
+            </label>
+            <label for="class">
+                Class:
+                <input id="class" name="class" type="text">
+            </label>
+            <label for="city">
+                City:
+                <input id="city" name="city" type="text">
+            </label>
+            <input type="submit" value="Add to Table">
+        </form>
+        <table id="my-table">
+            <thead>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Class</th>
+                <th>City</th>
+            </thead>
+            <tbody id="my-table-body"></tbody>
+        </table>
+    </body>
+</html>
