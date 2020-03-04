@@ -63,6 +63,14 @@ myForm.addEventListener( 'submit', function ( event ) {
     // Create our delete button.
     var deleteButton = document.createElement( 'BUTTON' );
     deleteButton.textContent = 'Delete Row'; // Add some text.
+    // These elements are being dynamically added - the event listener we
+    // added earlier wouldn't see it! We have to add event listeners as
+    // we're MAKING them instead here.
+    deleteButton.addEventListener( 'click', function ( event ) {
+        deleteRow( this ); // Delete the row!
+        // In this case, "this" is the element the EVENT is happening to!
+        // Remember objects? We used "this" to refer to itself there too!
+    } );
     var actionCell = document.createElement( 'TD' ); // Create the actions cell!
     actionCell.appendChild( deleteButton ); // Add the button inside.
     newRow.appendChild( actionCell ); // Don't forget to add this new cell to the row too!
